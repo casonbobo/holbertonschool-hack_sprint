@@ -1,2 +1,6 @@
 # holbertonschool-hack_sprint
-The repo for one of Holberton C20's Hack Sprint with the theme brekfast 
+The repo for one of Holberton C20's Hack Sprint with the theme brekfast.
+
+Made by:
+Karis Richardson
+and Cason Bobo
