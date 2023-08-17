@@ -18,6 +18,10 @@ config/features=PackedStringArray("4.1", "Forward Plus")
 
 window/size/viewport_width=1151
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 Forward={

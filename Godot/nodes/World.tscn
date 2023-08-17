@@ -1,12 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmbjl1k7nn4mh"]
+[gd_scene load_steps=8 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="Script" path="res://game_manager.gd" id="1_1xa1a"]
-[ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="1_q8vmi"]
-[ext_resource type="PackedScene" uid="uid://c4h3fmukoqmr5" path="res://nodes/item.tscn" id="3_wvvwv"]
+[ext_resource type="Texture2D" uid="uid://d6vp83utirjt" path="res://Assets (by Stark Crafts)/PS1_ForestAsset/stonewall.JPG" id="1_sqjbx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dmvt"]
+albedo_texture = ExtResource("1_sqjbx")
+
 [sub_resource type="BoxMesh" id="BoxMesh_bkhpd"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_2dmvt")
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_p2377"]
 
@@ -17,8 +20,8 @@ sky_material = SubResource("PhysicalSkyMaterial_p2377")
 background_mode = 2
 sky = SubResource("Sky_ji16g")
 
-[node name="GameManager" type="Node3D"]
-script = ExtResource("1_1xa1a")
+[node name="World" type="Node3D"]
+process_mode = 3
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 0.3, 0, 0, 0, 10, 0, 0, 0)
@@ -29,11 +32,6 @@ shape = SubResource("BoxShape3D_7xtf3")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_bkhpd")
 skeleton = NodePath("../..")
-
-[node name="Player" parent="." instance=ExtResource("1_q8vmi")]
-
-[node name="item" parent="." instance=ExtResource("3_wvvwv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57104, 0.478197, -0.57664)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hxeyv")
