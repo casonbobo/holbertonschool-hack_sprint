@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://fqhl5r81twgm"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_mwdap"]
+[ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="1_oj756"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_642do"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mwdap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 64.0
+offset_right = 789.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("1_oj756")
+theme_override_font_sizes/font_size = 120
+text = "PAUSED"
+
+[node name="Continue" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 256.0
+offset_right = 702.0
+offset_bottom = 321.0
+scale = Vector2(1.18674, 1.82548)
+theme_override_fonts/font = ExtResource("1_oj756")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
+text = "CONTINUE"
+
+[node name="Quit" type="Button" parent="CanvasLayer/ColorRect"]
+offset_left = 392.0
+offset_top = 472.0
+offset_right = 702.0
+offset_bottom = 537.0
+scale = Vector2(1.18674, 1.82548)
+theme_override_fonts/font = ExtResource("1_oj756")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
+text = "QUIT"

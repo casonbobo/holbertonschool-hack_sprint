@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmbjl1k7nn4mh"]
+[gd_scene load_steps=8 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://player.tscn" id="1_hnnf1"]
+[ext_resource type="Script" path="res://game_manager.gd" id="1_1xa1a"]
+[ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="1_q8vmi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
@@ -15,20 +16,20 @@ sky_material = SubResource("PhysicalSkyMaterial_p2377")
 background_mode = 2
 sky = SubResource("Sky_ji16g")
 
-[node name="Node3D" type="Node3D"]
+[node name="GameManager" type="Node3D"]
+script = ExtResource("1_1xa1a")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 0.3, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_7xtf3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_bkhpd")
 skeleton = NodePath("../..")
 
-[node name="Player" parent="." instance=ExtResource("1_hnnf1")]
+[node name="Player" parent="." instance=ExtResource("1_q8vmi")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hxeyv")

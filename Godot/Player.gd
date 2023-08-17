@@ -7,6 +7,18 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+@onready var camerabase = $CameraBase
+
+func _ready():
+	Input.mouse_mode = 2
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		camerabase.rotation.x -= deg_to_rad(event.relative.y * 1)
+		camerabase.rotation.x -= clamp(camerabase.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		rotation.y -= deg_to_rad(event.relative.x * 1)
+
+
 
 func _physics_process(delta):
 	# Add the gravity.
