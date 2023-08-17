@@ -48,6 +48,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
 text = "CONTINUE"
 
 [node name="Quit" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
 offset_left = 392.0
 offset_top = 472.0
 offset_right = 702.0

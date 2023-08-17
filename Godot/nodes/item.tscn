@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4h3fmukoqmr5"]
+
+[ext_resource type="Texture2D" uid="uid://ddnd2g138h117" path="res://item sprites/test_egg.png" id="1_8ykp1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3s1q5"]
+height = 1.5
+
+[node name="item" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_3s1q5")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.0001
+billboard = 2
+texture = ExtResource("1_8ykp1")
