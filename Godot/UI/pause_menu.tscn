@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://fqhl5r81twgm"]
+
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_dbstb"]
+[ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="2_xgi17"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7bf7"]
+bg_color = Color(0, 0, 0, 0.388235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_642do"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbstb")
+
+[node name="Panel" type="Panel" parent="."]
+process_mode = 2
+self_modulate = Color(0.968627, 0.901961, 0.972549, 1)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7bf7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -328.0
+offset_right = 564.0
+offset_bottom = 312.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xgi17")
+theme_override_font_sizes/font_size = 120
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="Continue" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xgi17")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
+text = "CONTINUE"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_xgi17")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
+text = "QUIT"

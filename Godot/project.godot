@@ -11,12 +11,8 @@ config_version=5
 [application]
 
 config/name="holbertonschool-hack_sprint"
-run/main_scene="res://nodes/World.tscn"
+run/main_scene="res://nodes/game_manager.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-
-[autoload]
-
-PauseMenu="*res://nodes/new_pause_menu.tscn"
 
 [display]
 
