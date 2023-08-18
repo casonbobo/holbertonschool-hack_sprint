@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cknoxed0pnrvx"]
+
+[ext_resource type="Texture2D" uid="uid://bfmhue2unsnt5" path="res://item sprites/raw_bacon.png" id="1_11v6u"]
+
+[node name="bacon_item" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_11v6u")

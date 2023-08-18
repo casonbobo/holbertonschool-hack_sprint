@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmtdwgu82385u"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_7mob6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ie6r7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s0lkp"]
+texture = SubResource("CanvasTexture_ie6r7")
+modulate_color = Color(1, 1, 1, 0.745098)
+
+[node name="hotbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.254902)
+custom_minimum_size = Vector2(335, 70)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 375.0
+offset_bottom = 80.0
+texture = SubResource("CanvasTexture_7mob6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -555.5
+offset_top = -304.0
+offset_right = -205.5
+offset_bottom = -254.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 9
+
+[node name="slot1" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
+
+[node name="slot2" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
+
+[node name="slot3" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
+
+[node name="slot4" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
+
+[node name="slot5" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
+
+[node name="slot6" type="Panel" parent="HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")

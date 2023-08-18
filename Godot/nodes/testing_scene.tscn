@@ -1,12 +1,12 @@
 [gd_scene load_steps=16 format=3 uid="uid://ddg437s2gclgp"]
 
 [ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="1_kr5y4"]
-[ext_resource type="PackedScene" uid="uid://cly1llhier3da" path="res://nodes/egg.tscn" id="2_8cdbs"]
-[ext_resource type="PackedScene" uid="uid://r0utc6kcp3l7" path="res://nodes/bacon.tscn" id="2_m1o6s"]
-[ext_resource type="PackedScene" uid="uid://d1yfg5ve1tpx7" path="res://nodes/syrup.tscn" id="4_hdwc1"]
-[ext_resource type="PackedScene" uid="uid://cisbrmqo41e3h" path="res://nodes/butter.tscn" id="5_ywyq5"]
-[ext_resource type="PackedScene" uid="uid://cs67vnc46xyt6" path="res://nodes/pancake_mix.tscn" id="6_8pr1r"]
-[ext_resource type="PackedScene" uid="uid://bthg8bme5g0ws" path="res://nodes/milk.tscn" id="7_v6srh"]
+[ext_resource type="PackedScene" uid="uid://cly1llhier3da" path="res://nodes/items/egg.tscn" id="2_8cdbs"]
+[ext_resource type="PackedScene" uid="uid://r0utc6kcp3l7" path="res://nodes/items/bacon.tscn" id="2_m1o6s"]
+[ext_resource type="PackedScene" uid="uid://d1yfg5ve1tpx7" path="res://nodes/items/syrup.tscn" id="4_hdwc1"]
+[ext_resource type="PackedScene" uid="uid://cisbrmqo41e3h" path="res://nodes/items/butter.tscn" id="5_ywyq5"]
+[ext_resource type="PackedScene" uid="uid://cs67vnc46xyt6" path="res://nodes/items/pancake_mix.tscn" id="6_8pr1r"]
+[ext_resource type="PackedScene" uid="uid://bthg8bme5g0ws" path="res://nodes/items/milk.tscn" id="7_v6srh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ofkyi"]
 size = Vector3(40, 0.25, 40)
