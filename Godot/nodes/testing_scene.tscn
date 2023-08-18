@@ -18,11 +18,11 @@ sky = SubResource("Sky_r0y6n")
 ambient_light_color = Color(0.6, 0.839216, 1, 1)
 ambient_light_energy = 5.0
 fog_enabled = true
-fog_light_color = Color(1, 0.67451, 0.827451, 1)
-fog_light_energy = 0.15
+fog_light_color = Color(1, 0.858824, 0.921569, 1)
+fog_light_energy = 0.2
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.012
-volumetric_fog_albedo = Color(0, 0.52549, 0.654902, 1)
+volumetric_fog_albedo = Color(0.27451, 0.823529, 1, 1)
 volumetric_fog_emission = Color(0.345098, 0, 0.815686, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1417u"]
