@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlajelqxlgn3h"]
+
+[ext_resource type="MeshLibrary" uid="uid://k8o6xxojskoa" path="res://Tileset/tileset.tres" id="1_d63ul"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_d63ul")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 65534, 2, 65535, 65534, 2, 0, 2, 1441793, 65535, 2, 655361, 65534, 1, 655361, 65533, 0, 655361, 65533, 65535, 1048577, 65534, 65534, 1048577, 1, 65534, 3)
+}
