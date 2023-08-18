@@ -16,3 +16,9 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 flip_v = true
 billboard = 2
 texture = ExtResource("1_2yylj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.847059, 0.337255, 1)
+light_indirect_energy = 4.0
+light_negative = true
+omni_range = 3.0
