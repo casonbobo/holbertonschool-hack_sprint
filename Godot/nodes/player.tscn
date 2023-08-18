@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwb41rep8d3x4"]
+[gd_scene load_steps=5 format=3 uid="uid://cwb41rep8d3x4"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_qgusn"]
+[ext_resource type="PackedScene" uid="uid://c7785klo2c82o" path="res://UI/pause_menu.tscn" id="2_qavnk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c65ih"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7t2rr"]
 
 [node name="Player" type="CharacterBody3D"]
+process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10643, 0)
 script = ExtResource("1_qgusn")
 
@@ -23,3 +25,5 @@ mesh = SubResource("CapsuleMesh_7t2rr")
 [node name="Camera3D" type="Camera3D" parent="CameraBase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119832, 0.902649, -0.430129)
 fov = 90.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_qavnk")]

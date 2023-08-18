@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmbjl1k7nn4mh"]
+[gd_scene load_steps=12 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="Texture2D" uid="uid://pvti83w56vya" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
+[ext_resource type="Texture2D" uid="uid://we0107n6t7bp" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
+[ext_resource type="Texture2D" uid="uid://isxlvi6vxbvk" path="res://Textures/Marine_plywood_pxr128.png" id="2_op0ts"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
@@ -21,6 +22,17 @@ sky_material = SubResource("PhysicalSkyMaterial_p2377")
 background_mode = 2
 sky = SubResource("Sky_ji16g")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hc74s"]
+size = Vector3(10, 0.3, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7q7k7"]
+albedo_texture = ExtResource("2_op0ts")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ioxtr"]
+material = SubResource("StandardMaterial3D_7q7k7")
+size = Vector3(10, 0.3, 10)
+
 [node name="World" type="Node3D"]
 process_mode = 3
 
@@ -40,3 +52,12 @@ environment = SubResource("Environment_hxeyv")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, -4.43462, 17.1283, 17.6501)
 shadow_enabled = true
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.6924)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_hc74s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_ioxtr")

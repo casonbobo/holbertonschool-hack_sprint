@@ -1,68 +1,197 @@
-[gd_scene load_steps=5 format=3 uid="uid://fqhl5r81twgm"]
+[gd_scene load_steps=9 format=3 uid="uid://c7785klo2c82o"]
 
-[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_dbstb"]
-[ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="2_xgi17"]
+[ext_resource type="Shader" path="res://UI/blur.gdshader" id="1_1wqbx"]
+[ext_resource type="Script" path="res://UI/PauseMenu.gd" id="2_qdcrp"]
+[ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="3_s3ok0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7bf7"]
-bg_color = Color(0, 0, 0, 0.388235)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g6lpe"]
+shader = ExtResource("1_1wqbx")
+shader_parameter/blur = 0.0
+shader_parameter/brightness = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_642do"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="Animation" id="Animation_ixnvo"]
+resource_name = "Pause"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [0.0, 2.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [1.0, 0.775]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[node name="PauseMenu" type="Control"]
-process_mode = 2
-layout_mode = 3
+[sub_resource type="Animation" id="Animation_y0h12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ga8t"]
+resource_name = "Unpause"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/blur")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/brightness")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CenterContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ink4d"]
+_data = {
+"Pause": SubResource("Animation_ixnvo"),
+"RESET": SubResource("Animation_y0h12"),
+"Unpause": SubResource("Animation_3ga8t")
+}
+
+[node name="PauseMenu" type="ColorRect"]
+process_mode = 3
+material = SubResource("ShaderMaterial_g6lpe")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dbstb")
+script = ExtResource("2_qdcrp")
 
-[node name="Panel" type="Panel" parent="."]
-process_mode = 2
-self_modulate = Color(0.968627, 0.901961, 0.972549, 1)
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_c7bf7")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="CenterContainer" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 568.0
-offset_bottom = 316.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.0074, 1.01286)
-alignment = 1
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(512, 256)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_xgi17")
-theme_override_font_sizes/font_size = 120
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s3ok0")
+theme_override_font_sizes/font_size = 58
 text = "PAUSED"
 horizontal_alignment = 1
 
-[node name="Continue" type="Button" parent="Panel/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_xgi17")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
-text = "CONTINUE"
 
-[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
+[node name="Resume" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_xgi17")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
-text = "QUIT"
+theme_override_fonts/font = ExtResource("3_s3ok0")
+theme_override_font_sizes/font_size = 40
+text = "RESUME"
 
-[connection signal="pressed" from="Panel/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[node name="Quit" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s3ok0")
+theme_override_font_sizes/font_size = 40
+text = "QUIT
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Unpause"
+libraries = {
+"": SubResource("AnimationLibrary_ink4d")
+}
