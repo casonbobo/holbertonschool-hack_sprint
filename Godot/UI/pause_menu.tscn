@@ -35,12 +35,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -580.0
-offset_top = -328.0
-offset_right = 564.0
-offset_bottom = 312.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 568.0
+offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0074, 1.01286)
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
@@ -63,3 +64,5 @@ theme_override_fonts/font = ExtResource("2_xgi17")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_642do")
 text = "QUIT"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Continue" to="." method="_on_continue_pressed"]

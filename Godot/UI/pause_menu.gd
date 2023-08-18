@@ -14,3 +14,6 @@ func  _game_manager_pause(is_paused : bool):
 	else:
 		hide()
 		Input.mouse_mode = 2
+		
+func _on_continue_button_pressed():
+	on_tree().is_paused = false

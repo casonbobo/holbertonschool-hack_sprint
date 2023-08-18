@@ -1,11 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="Texture2D" uid="uid://d6vp83utirjt" path="res://Assets (by Stark Crafts)/PS1_ForestAsset/stonewall.JPG" id="1_sqjbx"]
+[ext_resource type="Texture2D" uid="uid://pvti83w56vya" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dmvt"]
-albedo_texture = ExtResource("1_sqjbx")
+albedo_texture = ExtResource("1_1yi2m")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bkhpd"]
 lightmap_size_hint = Vector2i(14, 21)
