@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1yfg5ve1tpx7"]
+
+[ext_resource type="Texture2D" uid="uid://cmvchhd5wdimt" path="res://item sprites/maple_syrup.png" id="1_8fkam"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k2xiv"]
+radius = 0.4
+height = 1.25
+
+[node name="syrup" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_k2xiv")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, 0)
+billboard = 2
+texture = ExtResource("1_8fkam")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.847059, 0.337255, 1)
+light_indirect_energy = 4.0
+omni_range = 3.0

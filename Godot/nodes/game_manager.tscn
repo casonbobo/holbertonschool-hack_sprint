@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://63g2trqtlbb1"]
+[gd_scene load_steps=7 format=3 uid="uid://63g2trqtlbb1"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_elxil"]
 [ext_resource type="PackedScene" uid="uid://cmbjl1k7nn4mh" path="res://nodes/World.tscn" id="2_oymtt"]
 [ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="3_e70on"]
+[ext_resource type="PackedScene" uid="uid://fqhl5r81twgm" path="res://UI/pause_menu.tscn" id="4_50ssf"]
 [ext_resource type="PackedScene" uid="uid://cly1llhier3da" path="res://nodes/egg.tscn" id="5_atr5g"]
 [ext_resource type="PackedScene" uid="uid://r0utc6kcp3l7" path="res://nodes/bacon.tscn" id="6_pue1p"]
 
@@ -13,6 +14,10 @@ script = ExtResource("1_elxil")
 [node name="World" parent="." instance=ExtResource("2_oymtt")]
 
 [node name="Player" parent="." instance=ExtResource("3_e70on")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_50ssf")]
+game_manager = Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":3,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":ExtResource("1_elxil"))
+
 
 [node name="egg" parent="." instance=ExtResource("5_atr5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.83546, 2)
