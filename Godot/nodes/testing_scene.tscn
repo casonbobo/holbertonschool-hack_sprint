@@ -51,7 +51,7 @@ mesh = SubResource("BoxMesh_nu0i4")
 environment = SubResource("Environment_sobcu")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.230879, 19.5075, 0.220562)
 light_color = Color(1, 0.866667, 0.164706, 1)
 light_energy = 0.3
 shadow_blur = 0.0
