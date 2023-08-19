@@ -14,11 +14,11 @@ size = Vector3(40, 0.25, 40)
 [sub_resource type="BoxMesh" id="BoxMesh_nu0i4"]
 size = Vector3(25, 0.25, 25)
 
-[sub_resource type="Sky" id="Sky_r0y6n"]
+[sub_resource type="Sky" id="Sky_g82ns"]
 
 [sub_resource type="Environment" id="Environment_sobcu"]
 background_mode = 2
-sky = SubResource("Sky_r0y6n")
+sky = SubResource("Sky_g82ns")
 ambient_light_color = Color(0.6, 0.839216, 1, 1)
 ambient_light_energy = 5.0
 fog_enabled = true

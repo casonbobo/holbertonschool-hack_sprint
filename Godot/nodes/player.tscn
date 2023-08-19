@@ -8,7 +8,6 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7t2rr"]
 
 [node name="Player" type="CharacterBody3D"]
-process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10643, 0)
 script = ExtResource("1_qgusn")
 

@@ -12,13 +12,15 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.mouse_mode = 2
 
+func _unhandled_input(state: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		$PauseMenu.pause()
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		camerabase.rotation.x -= deg_to_rad(event.relative.y * 1)
 		camerabase.rotation.x -= clamp(camerabase.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 		rotation.y -= deg_to_rad(event.relative.x * 1)
-
-
 
 func _physics_process(delta):
 	# Add the gravity.
