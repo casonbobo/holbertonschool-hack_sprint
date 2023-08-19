@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dlajelqxlgn3h"]
 
-[ext_resource type="MeshLibrary" uid="uid://bkah0kvbw0uq4" path="res://Tileset/tileset.tres" id="1_d63ul"]
+[ext_resource type="MeshLibrary" uid="uid://74oei6bsw52q" path="res://Tileset/new_tileset.tres" id="1_4skno"]
 [ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="2_d6ycd"]
 [ext_resource type="PackedScene" uid="uid://r0utc6kcp3l7" path="res://nodes/items/bacon.tscn" id="3_4b7e0"]
 [ext_resource type="PackedScene" uid="uid://cisbrmqo41e3h" path="res://nodes/items/butter.tscn" id="5_pbmo6"]
@@ -28,7 +28,7 @@ volumetric_fog_emission = Color(0.345098, 0, 0.815686, 1)
 process_mode = 1
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("1_d63ul")
+mesh_library = ExtResource("1_4skno")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 data = {
