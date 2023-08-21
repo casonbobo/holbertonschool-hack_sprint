@@ -12,10 +12,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.mouse_mode = 2
 
-func _unhandled_input(state: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		$PauseMenu.pause()
-
 func _input(event):
 	if event is InputEventMouseMotion:
 		camerabase.rotation.x -= deg_to_rad(event.relative.y * 1)
@@ -26,13 +22,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-
 	# Handle Jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

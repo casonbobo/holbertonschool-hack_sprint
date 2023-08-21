@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="Texture2D" uid="uid://c38ots6vq0aup" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
-[ext_resource type="Texture2D" uid="uid://8uxr7furyfnc" path="res://Textures/Marine_plywood_pxr128.png" id="2_op0ts"]
+[ext_resource type="Texture2D" uid="uid://dv5j3xaujbw6j" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
+[ext_resource type="Texture2D" uid="uid://du8jrvi2eswri" path="res://Textures/Marine_plywood_pxr128.png" id="2_op0ts"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
