@@ -41,3 +41,5 @@ script = ExtResource("3_f84ng")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0)
 shape = SubResource("CapsuleShape3D_rpcad")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
