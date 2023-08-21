@@ -12,11 +12,11 @@ func _ready():
 	pass
 
 
-func initialize_item(item_name):
-	if item == null:
-		item = ItemClass.instantiate()
-		add_child(item)
-		item.set_item(item_name)
+# func initialize_item(item_name):
+#	if item == null:
+#		item = ItemClass.instantiate()
+#		add_child(item)
+#		item.set_item(item_name)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

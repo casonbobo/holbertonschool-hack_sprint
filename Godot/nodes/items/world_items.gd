@@ -7,8 +7,8 @@ func _ready():
 	item_name = "bacon"
 
 
-func pick_up_item():
-	Slot.initialize_item(item_name)
+func pick_up_item(body):
+	# Slot.initialize_item(item_name)
 	queue_free()
 
 
