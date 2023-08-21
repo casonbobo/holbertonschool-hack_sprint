@@ -12,7 +12,7 @@ func _ready():
 	item_name = \"bacon\"
 
 
-func pick_up_item(body):
+func pick_up_item():
 # Slot.initialize_item(item_name)
 	queue_free()
 

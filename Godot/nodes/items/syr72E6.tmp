@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs67vnc46xyt6"]
+[gd_scene load_steps=7 format=3 uid="uid://d1yfg5ve1tpx7"]
 
-[ext_resource type="Texture2D" uid="uid://d2rmab2fr2bff" path="res://item sprites/generic_pancake_mix.png" id="1_eklty"]
+[ext_resource type="Texture2D" uid="uid://cmvchhd5wdimt" path="res://item sprites/maple_syrup.png" id="1_8fkam"]
 
 [sub_resource type="GDScript" id="GDScript_gxhwr"]
 script/source = "extends StaticBody3D
@@ -12,7 +12,7 @@ func _ready():
 	item_name = \"bacon\"
 
 
-func pick_up_item(body):
+func pick_up_item():
 # Slot.initialize_item(item_name)
 	queue_free()
 
@@ -23,10 +23,11 @@ func _process(delta):
 
 "
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_a8624"]
-height = 1.5
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k2xiv"]
+radius = 0.4
+height = 1.25
 
-[sub_resource type="Animation" id="Animation_xv08y"]
+[sub_resource type="Animation" id="Animation_ufmwk"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,7 +42,7 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_w1qrg"]
+[sub_resource type="Animation" id="Animation_qbmsv"]
 resource_name = "floating"
 length = 3.0
 loop_mode = 1
@@ -58,23 +59,23 @@ tracks/0/keys = {
 "values": [Vector3(0, 0.1, 0), Vector3(0, 0.1, 0), Vector3(0, -0.1, 0), Vector3(0, -0.1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6a00f"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o4wpb"]
 _data = {
-"RESET": SubResource("Animation_xv08y"),
-"floating": SubResource("Animation_w1qrg")
+"RESET": SubResource("Animation_ufmwk"),
+"floating": SubResource("Animation_qbmsv")
 }
 
-[node name="pancake_mix" type="StaticBody3D"]
+[node name="syrup" type="StaticBody3D"]
 collision_layer = 2
 script = SubResource("GDScript_gxhwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_a8624")
+shape = SubResource("CapsuleShape3D_k2xiv")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0)
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 0, 0)
 billboard = 2
-texture = ExtResource("1_eklty")
+texture = ExtResource("1_8fkam")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(1, 0.847059, 0.337255, 1)
@@ -84,5 +85,5 @@ omni_range = 3.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "floating"
 libraries = {
-"": SubResource("AnimationLibrary_6a00f")
+"": SubResource("AnimationLibrary_o4wpb")
 }
