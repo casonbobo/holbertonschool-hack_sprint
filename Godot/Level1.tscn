@@ -51,7 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91731, 1.17081, -0.364178)
 [node name="butter" parent="." instance=ExtResource("5_pbmo6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1446, 1.49879, 0)
 
-[node name="item" parent="." instance=ExtResource("6_2sq3g")]
+[node name="egg" parent="." instance=ExtResource("6_2sq3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51273, 1.33538, 1.71891)
 
 [node name="milk" parent="." instance=ExtResource("7_mc0j7")]
