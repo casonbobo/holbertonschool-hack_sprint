@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmbjl1k7nn4mh"]
+[gd_scene load_steps=10 format=3 uid="uid://cmbjl1k7nn4mh"]
 
-[ext_resource type="Texture2D" uid="uid://dv5j3xaujbw6j" path="res://Textures/Belgium_block_pxr128.png" id="1_1yi2m"]
-[ext_resource type="Texture2D" uid="uid://du8jrvi2eswri" path="res://Textures/Marine_plywood_pxr128.png" id="2_op0ts"]
+[ext_resource type="Texture2D" uid="uid://do4fwng82y52k" path="res://Textures/new_floor texture.png" id="1_4p8qd"]
+[ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="2_6souj"]
+[ext_resource type="PackedScene" uid="uid://7u7mlscbhucd" path="res://nodes/door.tscn" id="3_c6l3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7xtf3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dmvt"]
-albedo_texture = ExtResource("1_1yi2m")
+albedo_texture = ExtResource("1_4p8qd")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bkhpd"]
@@ -22,17 +23,6 @@ sky_material = SubResource("PhysicalSkyMaterial_p2377")
 background_mode = 2
 sky = SubResource("Sky_ji16g")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hc74s"]
-size = Vector3(10, 0.3, 10)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7q7k7"]
-albedo_texture = ExtResource("2_op0ts")
-uv1_scale = Vector3(10, 10, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ioxtr"]
-material = SubResource("StandardMaterial3D_7q7k7")
-size = Vector3(10, 0.3, 10)
-
 [node name="World" type="Node3D"]
 process_mode = 3
 
@@ -43,6 +33,7 @@ transform = Transform3D(10, 0, 0, 0, 0.3, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_7xtf3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_bkhpd")
 skeleton = NodePath("../..")
 
@@ -53,11 +44,8 @@ environment = SubResource("Environment_hxeyv")
 transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, -4.43462, 17.1283, 17.6501)
 shadow_enabled = true
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12.6924)
+[node name="Player" parent="." instance=ExtResource("2_6souj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.221151, 1.01, 0.0721235)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-shape = SubResource("BoxShape3D_hc74s")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-mesh = SubResource("BoxMesh_ioxtr")
+[node name="Door" parent="." instance=ExtResource("3_c6l3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.58372)
