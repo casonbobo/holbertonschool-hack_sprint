@@ -14,16 +14,16 @@ func opening():
 	print("opening")
 
 func _unhandled_input(event):
-	if doorOpen == false:
-		if Input.is_action_just_pressed("Interact"):
-			opening()
-			doorOpen = true
-			print("interacting")
-	else:
-		if Input.is_action_just_pressed("Interact"):
-			closing()
-			doorOpen = false
-			print("interacting")
+		if doorOpen == false:
+			if Input.is_action_just_pressed("Interact"):
+				opening()
+				doorOpen = true
+				print("interacting")
+		else:
+			if Input.is_action_just_pressed("Interact"):
+				closing()
+				doorOpen = false
+				print("interacting")
 		
 		
 
