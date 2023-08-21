@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmtdwgu82385u"]
-
-[ext_resource type="Script" path="res://UI/slot.gd" id="1_6yadd"]
+[gd_scene load_steps=4 format=3 uid="uid://cmtdwgu82385u"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7mob6"]
 
@@ -37,38 +35,38 @@ offset_bottom = 70.0
 size_flags_vertical = 4
 theme_override_constants/separation = 9
 
-[node name="slot1" type="Panel" parent="HBoxContainer"]
+[node name="BaconSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")
 
-[node name="slot2" type="Panel" parent="HBoxContainer"]
+[node name="ButterSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")
 
-[node name="slot3" type="Panel" parent="HBoxContainer"]
+[node name="EggSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")
 
-[node name="slot4" type="Panel" parent="HBoxContainer"]
+[node name="MilkSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")
 
-[node name="slot5" type="Panel" parent="HBoxContainer"]
+[node name="PancakeMixSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")
 
-[node name="slot6" type="Panel" parent="HBoxContainer"]
+[node name="SyrupSlot" type="Panel" parent="HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
-script = ExtResource("1_6yadd")

@@ -1,27 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cly1llhier3da"]
 
 [ext_resource type="Texture2D" uid="uid://ddnd2g138h117" path="res://item sprites/test_egg.png" id="1_8ykp1"]
-
-[sub_resource type="GDScript" id="GDScript_gxhwr"]
-script/source = "extends StaticBody3D
-
-var item_name
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	item_name = \"bacon\"
-
-
-func pick_up_item(body):
-# Slot.initialize_item(item_name)
-	queue_free()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-"
+[ext_resource type="Script" path="res://nodes/items/world item scripts/Egg.gd" id="1_fteso"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3s1q5"]
 height = 1.5
@@ -66,7 +46,7 @@ _data = {
 
 [node name="item" type="StaticBody3D"]
 collision_layer = 2
-script = SubResource("GDScript_gxhwr")
+script = ExtResource("1_fteso")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
