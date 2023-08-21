@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func set_item(name):
-	item_name = name
-	$name.visibility = true
+# func set_item(name):
+#	item_name = name
+#	$name.visibility = true
 

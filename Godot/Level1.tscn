@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlajelqxlgn3h"]
+[gd_scene load_steps=14 format=3 uid="uid://dlajelqxlgn3h"]
 
 [ext_resource type="MeshLibrary" uid="uid://74oei6bsw52q" path="res://Tileset/new_tileset.tres" id="1_4skno"]
 [ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="2_d6ycd"]
@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cly1llhier3da" path="res://nodes/items/egg.tscn" id="6_2sq3g"]
 [ext_resource type="PackedScene" uid="uid://bthg8bme5g0ws" path="res://nodes/items/milk.tscn" id="7_mc0j7"]
 [ext_resource type="PackedScene" uid="uid://cs67vnc46xyt6" path="res://nodes/items/pancake_mix.tscn" id="8_3avec"]
+[ext_resource type="Script" path="res://nodes/inventory_objectives.gd" id="9_qr72n"]
 [ext_resource type="PackedScene" uid="uid://d1yfg5ve1tpx7" path="res://nodes/items/syrup.tscn" id="9_x31oi"]
+[ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="10_jf76x"]
+[ext_resource type="PackedScene" uid="uid://dul155yma4moq" path="res://UI/objectives.tscn" id="11_elfpa"]
 
 [sub_resource type="Sky" id="Sky_r0y6n"]
 
@@ -59,3 +62,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9308, 1.41583, 0.0321665)
 
 [node name="syrup" parent="." instance=ExtResource("9_x31oi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59077, -11.1155)
+
+[node name="inventory and objectives" type="CanvasLayer" parent="."]
+script = ExtResource("9_qr72n")
+
+[node name="hotbar" parent="inventory and objectives" instance=ExtResource("10_jf76x")]
+
+[node name="objectives" parent="inventory and objectives" instance=ExtResource("11_elfpa")]
