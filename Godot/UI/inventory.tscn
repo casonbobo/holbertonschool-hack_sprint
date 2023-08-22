@@ -70,6 +70,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 
 [node name="ButterItem" type="TextureRect" parent="HBoxContainer/slot2"]
 visible = false
+layout_mode = 0
 offset_right = 60.8846
 offset_bottom = 40.0
 texture = ExtResource("2_q3me0")
@@ -82,6 +83,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 
 [node name="EggItem" type="TextureRect" parent="HBoxContainer/slot3"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 55.8256
 texture = ExtResource("3_m5ngf")
@@ -94,6 +96,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 
 [node name="MilkItem" type="TextureRect" parent="HBoxContainer/slot4"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_3q4ru")
@@ -106,6 +109,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 
 [node name="PancakeMixItem" type="TextureRect" parent="HBoxContainer/slot5"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 56.0
 texture = ExtResource("5_m5eg1")
@@ -118,6 +122,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 
 [node name="SyrupItem" type="TextureRect" parent="HBoxContainer/slot6"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 50.0
 texture = ExtResource("6_wmmrd")
