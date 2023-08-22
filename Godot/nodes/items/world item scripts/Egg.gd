@@ -7,8 +7,8 @@ func _ready():
 	pass
 
 
-func pick_up_item(_body):
-	$EggItem.visibility = true
+func pick_up_item(body):
+	EggSlot.visibility = true
 	queue_free()
 
 

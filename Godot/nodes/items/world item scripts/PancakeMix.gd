@@ -7,8 +7,8 @@ func _ready():
 	pass
 
 
-func pick_up_item(_body):
-	$PancakeMixItem.visibility = true
+func pick_up_item(body):
+	PancakeMixSlot.visibility = true
 	queue_free()
 
 

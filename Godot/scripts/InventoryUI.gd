@@ -1,8 +1,9 @@
-extends Area3D
+extends Node
 
-<<<<<<< Updated upstream:Godot/nodes/PickupArea.gd
-var picked_up_items = {}
-=======
+
+func update_inventory():
+	InventoryHotbar.init_inventory()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,8 +13,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
->>>>>>> Stashed changes:Godot/scripts/PickupArea.gd
-
-func _on_body_entered(body):
-	body.pick_up_item(self)

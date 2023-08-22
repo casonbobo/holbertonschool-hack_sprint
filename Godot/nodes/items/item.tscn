@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://5x4hw0cjegni"]
+
+[ext_resource type="Texture2D" uid="uid://bfmhue2unsnt5" path="res://item sprites/raw_bacon.png" id="1_dd41a"]
+[ext_resource type="Script" path="res://nodes/items/InventoryItem.gd" id="1_lmpc7"]
+[ext_resource type="Texture2D" uid="uid://b10irylkqudw1" path="res://item sprites/sliced_butter.png" id="3_o2n0v"]
+[ext_resource type="Texture2D" uid="uid://ddnd2g138h117" path="res://item sprites/test_egg.png" id="4_qwqr5"]
+[ext_resource type="Texture2D" uid="uid://cxeuvwkoks37" path="res://item sprites/milk_carton.png" id="5_jvgdc"]
+[ext_resource type="Texture2D" uid="uid://d2rmab2fr2bff" path="res://item sprites/generic_pancake_mix.png" id="6_xdvxj"]
+[ext_resource type="Texture2D" uid="uid://cmvchhd5wdimt" path="res://item sprites/maple_syrup.png" id="7_rqatx"]
+
+[node name="item" type="Node2D"]
+script = ExtResource("1_lmpc7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bacon" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -36.0
+offset_right = 90.7576
+offset_bottom = 4.0
+grow_vertical = 2
+rotation = 0.785398
+texture = ExtResource("1_dd41a")
+expand_mode = 3
+flip_v = true
+
+[node name="butter" type="TextureRect" parent="Control"]
+offset_right = 60.8846
+offset_bottom = 40.0
+texture = ExtResource("3_o2n0v")
+expand_mode = 3
+
+[node name="egg" type="TextureRect" parent="Control"]
+offset_right = 40.0
+offset_bottom = 55.8256
+texture = ExtResource("4_qwqr5")
+expand_mode = 5
+
+[node name="milk" type="TextureRect" parent="Control"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_jvgdc")
+expand_mode = 5
+
+[node name="pancake_mix" type="TextureRect" parent="Control"]
+offset_right = 40.0
+offset_bottom = 56.0
+texture = ExtResource("6_xdvxj")
+expand_mode = 5
+
+[node name="syrup" type="TextureRect" parent="Control"]
+offset_right = 40.0
+offset_bottom = 50.0
+texture = ExtResource("7_rqatx")
+expand_mode = 5
