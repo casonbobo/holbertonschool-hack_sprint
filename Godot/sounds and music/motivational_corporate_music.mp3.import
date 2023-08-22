@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1mrnfmn4rq8h"
+path="res://.godot/imported/motivational_corporate_music.mp3-d6be81b860e9479fb85b5a4b8920ff62.mp3str"
+
+[deps]
+
+source_file="res://sounds and music/motivational_corporate_music.mp3"
+dest_files=["res://.godot/imported/motivational_corporate_music.mp3-d6be81b860e9479fb85b5a4b8920ff62.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

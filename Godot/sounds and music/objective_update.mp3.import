@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vc3648qb5hka"
+path="res://.godot/imported/objective_update.mp3-1d243810a2d5be1733426401c645ceb8.mp3str"
+
+[deps]
+
+source_file="res://sounds and music/objective_update.mp3"
+dest_files=["res://.godot/imported/objective_update.mp3-1d243810a2d5be1733426401c645ceb8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

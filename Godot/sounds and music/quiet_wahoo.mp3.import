@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm8fi38oxdpcn"
+path="res://.godot/imported/quiet_wahoo.mp3-b1d3ed7cf8a47c801543a50aad58f1d4.mp3str"
+
+[deps]
+
+source_file="res://sounds and music/quiet_wahoo.mp3"
+dest_files=["res://.godot/imported/quiet_wahoo.mp3-b1d3ed7cf8a47c801543a50aad58f1d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
