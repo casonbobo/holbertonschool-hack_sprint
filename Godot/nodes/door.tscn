@@ -1,13 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://7u7mlscbhucd"]
+[gd_scene load_steps=13 format=3 uid="uid://7u7mlscbhucd"]
 
 [ext_resource type="Script" path="res://scripts/Door.gd" id="1_xqvgu"]
 [ext_resource type="Script" path="res://scripts/interaction_area.gd" id="2_c1wfb"]
+[ext_resource type="Texture2D" uid="uid://b5sn3enb0h5j" path="res://Textures/Rough_cut_redwood_pxr128.png" id="2_vv25f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oqt4i"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovw5a"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_al41m"]
+albedo_texture = ExtResource("2_vv25f")
+uv1_scale = Vector3(4, 4, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6sb56"]
+material = SubResource("StandardMaterial3D_al41m")
 size = Vector3(2, 2, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ddxyx"]
@@ -74,17 +78,17 @@ _data = {
 script = ExtResource("1_xqvgu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_oqt4i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
-material_override = SubResource("StandardMaterial3D_ovw5a")
 mesh = SubResource("BoxMesh_6sb56")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0)
-visibility_parent = NodePath("../MeshInstance3D")
+visible = false
 shape = SubResource("BoxShape3D_ddxyx")
 
 [node name="interaction_area" type="Area3D" parent="StaticBody3D"]
@@ -98,3 +102,15 @@ shape = SubResource("SphereShape3D_sgycj")
 libraries = {
 "": SubResource("AnimationLibrary_f7yyw")
 }
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430075, 1.19972, 1.14796)
+light_color = Color(1, 0.670588, 0.396078, 1)
+light_energy = 2.0
+light_volumetric_fog_energy = 0.0
+light_size = 5.0
+light_specular = 0.0
+distance_fade_enabled = true
+distance_fade_begin = 10.0
+omni_range = 7.0
+omni_attenuation = 0.0

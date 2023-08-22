@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://m0hhwdqbdhu3"]
-
-[node name="StaticBody3D" type="StaticBody3D"]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]

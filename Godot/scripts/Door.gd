@@ -15,7 +15,7 @@ func opening():
 	print("opening")
 
 func _unhandled_input(event):
-		if doorOpen == false && player.itemCount == 6:
+		if doorOpen == false:
 			if Input.is_action_just_pressed("Interact"):
 				opening()
 				doorOpen = true

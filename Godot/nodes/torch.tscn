@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://m0hhwdqbdhu3"]
+
+[ext_resource type="Texture2D" uid="uid://cp8xi8v6mx4mq" path="res://item sprites/pixel-torch.png" id="1_t0tbx"]
+
+[node name="Torch" type="StaticBody3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.65098, 0.321569, 1)
+light_energy = 3.0
+light_volumetric_fog_energy = 0.5
+light_size = 20.0
+light_specular = 0.0
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 20.0
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+texture = ExtResource("1_t0tbx")
