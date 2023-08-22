@@ -22,6 +22,7 @@ var hasEgg = false
 @onready var camerabase = $CameraBase
 @onready var jump = $"../Node/jump"
 @onready var walking = $"../Node/walking"
+@onready var objectives = $"inventory and objectives/objectives"
 
 
 func _ready():
@@ -57,23 +58,29 @@ func get_bacon():
 	bacon.visible = true
 	hasBacon = true
 	itemCount += 1
+	objectives.cross_off_item()
 func get_milk():
 	milk.visible = true
 	hasMilk = true
 	itemCount += 1
+	objectives.cross_off_item()
 func get_egg():
 	egg.visible = true
 	hasEgg = true
 	itemCount += 1
+	objectives.cross_off_item()
 func get_pancakeMix():
 	pancakeMix.visible = true
 	hasPancakeMix = true
 	itemCount += 1
+	objectives.cross_off_item()
 func get_butter():
 	butter.visible = true
 	hasButter = true
 	itemCount += 1
+	objectives.cross_off_item()
 func get_syrup():
 	syrup.visible = true
 	hasSyrup = true
 	itemCount += 1
+	objectives.cross_off_item()
