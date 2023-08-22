@@ -7,8 +7,8 @@ func _ready():
 	pass
 
 
-func pick_up_item(body):
-	ButterSlot.visibility = true
+func pick_up_item(_body):
+	$ButterItem.visibility = true
 	queue_free()
 
 

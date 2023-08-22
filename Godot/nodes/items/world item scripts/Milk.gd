@@ -7,8 +7,8 @@ func _ready():
 	pass
 
 
-func pick_up_item(body):
-	MilkSlot.visibility = true
+func pick_up_item(_body):
+	$MilkItem.visibility = true
 	queue_free()
 
 

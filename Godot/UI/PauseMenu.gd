@@ -18,11 +18,3 @@ func pause():
 	get_tree().paused = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-func _input(event):
-	if Input.is_action_just_pressed("ui_cancel"):
-		if get_tree().paused == false:
-			pause()
-			print("pause")
-		else:
-			unpause()
-			print("unpause")

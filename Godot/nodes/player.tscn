@@ -1,15 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwb41rep8d3x4"]
+[gd_scene load_steps=7 format=3 uid="uid://cwb41rep8d3x4"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_qgusn"]
 [ext_resource type="PackedScene" uid="uid://c7785klo2c82o" path="res://UI/pause_menu.tscn" id="2_qavnk"]
-<<<<<<< Updated upstream
-[ext_resource type="Script" path="res://nodes/PickupArea.gd" id="3_f84ng"]
-[ext_resource type="Script" path="res://nodes/inventory_objectives.gd" id="4_u1i4h"]
-[ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="5_bkas7"]
-[ext_resource type="PackedScene" uid="uid://dul155yma4moq" path="res://UI/objectives.tscn" id="6_ni4n0"]
-=======
 [ext_resource type="Script" path="res://scripts/PickupArea.gd" id="3_ky2lv"]
->>>>>>> Stashed changes
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c65ih"]
 
@@ -20,7 +13,6 @@ radius = 0.65
 height = 2.2
 
 [node name="Player" type="CharacterBody3D"]
-process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10643, 0)
 collision_layer = 4
 script = ExtResource("1_qgusn")
@@ -39,6 +31,8 @@ mesh = SubResource("CapsuleMesh_7t2rr")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119832, 0.902649, -0.430129)
 fov = 90.0
 
+[node name="PauseMenu" parent="." instance=ExtResource("2_qavnk")]
+
 [node name="PickupArea" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 2
@@ -47,16 +41,5 @@ script = ExtResource("3_ky2lv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0)
 shape = SubResource("CapsuleShape3D_rpcad")
-
-[node name="inventory and objectives" type="CanvasLayer" parent="."]
-process_mode = 1
-script = ExtResource("4_u1i4h")
-
-[node name="hotbar" parent="inventory and objectives" instance=ExtResource("5_bkas7")]
-process_mode = 1
-
-[node name="objectives" parent="inventory and objectives" instance=ExtResource("6_ni4n0")]
-
-[node name="PauseMenu" parent="inventory and objectives" instance=ExtResource("2_qavnk")]
 
 [connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
