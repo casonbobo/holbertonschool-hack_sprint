@@ -16,10 +16,7 @@ config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]
 
-InventoryStorage="*res://scripts/InventoryStorage.gd"
-InventoryUI="*res://scripts/InventoryUI.gd"
-InventoryHotbar="*res://scripts/InventoryHotbar.gd"
-Slot="*res://scripts/Slot.gd"
+Inventory="*res://scripts/inventory.gd"
 
 [display]
 

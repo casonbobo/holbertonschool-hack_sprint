@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=11 format=3 uid="uid://dlajelqxlgn3h"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://dlajelqxlgn3h"]
->>>>>>> Stashed changes
 
 [ext_resource type="MeshLibrary" uid="uid://74oei6bsw52q" path="res://Tileset/new_tileset.tres" id="1_4skno"]
 [ext_resource type="PackedScene" uid="uid://cwb41rep8d3x4" path="res://nodes/player.tscn" id="2_d6ycd"]
@@ -64,12 +60,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9308, 1.41583, 0.0321665)
 
 [node name="syrup" parent="." instance=ExtResource("9_x31oi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59077, -11.1155)
-<<<<<<< Updated upstream
-=======
-
-[node name="inventory and objectives" type="CanvasLayer" parent="."]
-
-[node name="hotbar" parent="inventory and objectives" instance=ExtResource("10_jf76x")]
-
-[node name="objectives" parent="inventory and objectives" instance=ExtResource("11_elfpa")]
->>>>>>> Stashed changes

@@ -1,7 +1,27 @@
 [gd_scene load_steps=7 format=3 uid="uid://bthg8bme5g0ws"]
 
-[ext_resource type="Script" path="res://nodes/items/world item scripts/Milk.gd" id="1_46pka"]
 [ext_resource type="Texture2D" uid="uid://cxeuvwkoks37" path="res://item sprites/milk_carton.png" id="1_qahmn"]
+
+[sub_resource type="GDScript" id="GDScript_gxhwr"]
+script/source = "extends StaticBody3D
+
+var item_name
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	item_name = \"bacon\"
+
+
+func pick_up_item(body):
+# Slot.initialize_item(item_name)
+	queue_free()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+"
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mexji"]
 height = 1.5
@@ -47,7 +67,7 @@ _data = {
 
 [node name="milk" type="StaticBody3D"]
 collision_layer = 2
-script = ExtResource("1_46pka")
+script = SubResource("GDScript_gxhwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_mexji")
