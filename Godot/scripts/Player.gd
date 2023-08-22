@@ -20,6 +20,8 @@ var hasEgg = false
 @onready var egg = $"../hotbar/HBoxContainer/slot6/TestEgg"
 @export var itemCount = 0
 @onready var camerabase = $CameraBase
+@onready var jump = $"../Node/jump"
+@onready var walking = $"../Node/walking"
 
 func _ready():
 	Input.mouse_mode = 2
@@ -36,6 +38,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 	# Handle Jump.
 	if Input.is_action_pressed("Jump") and is_on_floor():
+		jump.play()
 		velocity.y = JUMP_VELOCITY
 	var input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -43,6 +46,7 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
+		walking.play()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 

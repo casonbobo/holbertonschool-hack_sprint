@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dlajelqxlgn3h"]
+[gd_scene load_steps=31 format=3 uid="uid://dlajelqxlgn3h"]
 
 [ext_resource type="MeshLibrary" uid="uid://74oei6bsw52q" path="res://Tileset/new_tileset.tres" id="1_4skno"]
 [ext_resource type="PackedScene" uid="uid://7u7mlscbhucd" path="res://nodes/door.tscn" id="2_8xxpf"]
@@ -10,10 +10,22 @@
 [ext_resource type="PackedScene" uid="uid://cs67vnc46xyt6" path="res://nodes/items/pancake_mix.tscn" id="8_3avec"]
 [ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="9_6bomh"]
 [ext_resource type="PackedScene" uid="uid://d1yfg5ve1tpx7" path="res://nodes/items/syrup.tscn" id="9_x31oi"]
-[ext_resource type="PackedScene" uid="uid://m0hhwdqbdhu3" path="res://nodes/torch.tscn" id="10_gyeyw"]
+[ext_resource type="PackedScene" path="res://nodes/torch.tscn" id="10_gyeyw"]
 [ext_resource type="Texture2D" uid="uid://do4fwng82y52k" path="res://Textures/new_floor texture.png" id="12_yi6ns"]
-[ext_resource type="PackedScene" uid="uid://dujnhxwaotni4" path="res://nodes/exitSign.tscn" id="13_f4gu2"]
-[ext_resource type="PackedScene" uid="uid://cijdj5cg0jbrd" path="res://nodes/big_brekfast.tscn" id="14_5voud"]
+[ext_resource type="PackedScene" path="res://nodes/exitSign.tscn" id="13_f4gu2"]
+[ext_resource type="PackedScene" path="res://nodes/big_brekfast.tscn" id="14_5voud"]
+[ext_resource type="AudioStream" uid="uid://bb0x2x5egtmrv" path="res://sounds and music/loudSilence.mp3" id="15_0n007"]
+[ext_resource type="Script" path="res://scripts/Ambiance.gd" id="16_du7hh"]
+[ext_resource type="AudioStream" uid="uid://7xmtvhemcxeo" path="res://sounds and music/pickup_item.mp3" id="16_jif2h"]
+[ext_resource type="AudioStream" uid="uid://b5cpgkc73r31t" path="res://sounds and music/door_open.mp3" id="17_cxl74"]
+[ext_resource type="AudioStream" uid="uid://dwolpyipm5pyt" path="res://sounds and music/door_close.mp3" id="18_jme7b"]
+[ext_resource type="AudioStream" uid="uid://vqihkb6he18g" path="res://sounds and music/jump.mp3" id="19_gh3pv"]
+[ext_resource type="AudioStream" uid="uid://c13jmgqihisn6" path="res://sounds and music/footsteps2.mp3" id="21_tbvg6"]
+[ext_resource type="Script" path="res://scripts/Suspense.gd" id="22_l2je7"]
+[ext_resource type="AudioStream" uid="uid://o5x0ncnd5fj5" path="res://sounds and music/eeryB.mp3" id="22_p1ucj"]
+[ext_resource type="AudioStream" uid="uid://1mrnfmn4rq8h" path="res://sounds and music/motivational_corporate_music.mp3" id="24_awrt7"]
+[ext_resource type="AudioStream" uid="uid://dgmrior6al5ek" path="res://sounds and music/cheering.mp3" id="25_btohb"]
+[ext_resource type="AudioStream" uid="uid://dm8fi38oxdpcn" path="res://sounds and music/quiet_wahoo.mp3" id="26_jtiuu"]
 
 [sub_resource type="Sky" id="Sky_r0y6n"]
 
@@ -173,5 +185,43 @@ transform = Transform3D(8.34742e-10, 0, -0.07, 0, 0.07, 0, 0.07, 0, 8.34742e-10,
 
 [node name="bigBrekfast" parent="." instance=ExtResource("14_5voud")]
 transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 14.3808, 1.2194, 0.00922847)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("15_0n007")
+autoplay = true
+script = ExtResource("16_du7hh")
+
+[node name="pickupItem" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("16_jif2h")
+
+[node name="doorOpen" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("17_cxl74")
+pitch_scale = 2.5
+
+[node name="doorClose" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("18_jme7b")
+
+[node name="jump" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("19_gh3pv")
+
+[node name="walking" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("21_tbvg6")
+
+[node name="Unsettling" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("22_p1ucj")
+script = ExtResource("22_l2je7")
+
+[node name="Winning" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("24_awrt7")
+
+[node name="Cheering" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("25_btohb")
+
+[node name="quietYay" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("26_jtiuu")
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="Node"]
 
 [editable path="hotbar"]

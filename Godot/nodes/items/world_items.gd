@@ -2,9 +2,11 @@ extends StaticBody3D
 
 @export var itemName: String
 @onready var player = $"../Player"
+@onready var pickup_item = $"../Node/pickupItem"
 
 
 func pick_up_item(body):
+	pickup_item.play()
 	print(itemName)
 	addItem()
 	print(player.itemCount)

@@ -3,13 +3,27 @@ extends Node3D
 var doorOpen = false;
 @onready var animator: AnimationPlayer = $AnimationPlayer
 @onready var player = $"../Player"
-	
+@onready var door_open = $"../Node/doorOpen"
+@onready var door_close = $"../Node/doorClose"
+@onready var unsettling = $"../Node/Unsettling"
+@onready var winning = $"../Node/Winning"
+@onready var cheering = $"../Node/Cheering"
+
+
 func closing():
+	door_close.play()
+	unsettling.playing = true
+	winning.playing = false
+	cheering.playing = false
 	animator.play("closing")
 	doorOpen = false
 	print("closing")
 	
 func opening():
+	door_open.play()
+	unsettling.playing = false
+	winning.playing = true
+	cheering.playing = true
 	animator.play("opening")
 	doorOpen = true
 	print("opening")
