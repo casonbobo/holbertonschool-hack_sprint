@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_qgusn"]
 [ext_resource type="PackedScene" uid="uid://c7785klo2c82o" path="res://UI/pause_menu.tscn" id="2_qavnk"]
-[ext_resource type="Script" path="res://nodes/PickupArea.gd" id="3_f84ng"]
+[ext_resource type="Script" path="res://scripts/PickupArea.gd" id="2_vy787"]
 [ext_resource type="Script" path="res://nodes/inventory_objectives.gd" id="4_u1i4h"]
 [ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="5_bkas7"]
 [ext_resource type="PackedScene" uid="uid://dul155yma4moq" path="res://UI/objectives.tscn" id="6_ni4n0"]
@@ -38,7 +38,7 @@ fov = 90.0
 [node name="PickupArea" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("3_f84ng")
+script = ExtResource("2_vy787")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39, 0)
@@ -50,6 +50,7 @@ script = ExtResource("4_u1i4h")
 
 [node name="hotbar" parent="inventory and objectives" instance=ExtResource("5_bkas7")]
 process_mode = 1
+visible = false
 
 [node name="objectives" parent="inventory and objectives" instance=ExtResource("6_ni4n0")]
 

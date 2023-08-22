@@ -45,9 +45,10 @@ _data = {
 "floating": SubResource("Animation_058ib")
 }
 
-[node name="bacon" type="StaticBody3D"]
+[node name="Bacon" type="StaticBody3D"]
 collision_layer = 2
 script = ExtResource("1_okr1c")
+itemName = "Bacon"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_qslud")
