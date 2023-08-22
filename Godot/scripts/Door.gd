@@ -8,6 +8,7 @@ var doorOpen = false;
 @onready var unsettling = $"../Node/Unsettling"
 @onready var winning = $"../Node/Winning"
 @onready var cheering = $"../Node/Cheering"
+@onready var quiet_yay = $"../Node/quietYay"
 
 
 func closing():
@@ -15,6 +16,7 @@ func closing():
 	unsettling.playing = true
 	winning.playing = false
 	cheering.playing = false
+#	quiet_yay.playing = false
 	animator.play("closing")
 	doorOpen = false
 	print("closing")
@@ -24,6 +26,7 @@ func opening():
 	unsettling.playing = false
 	winning.playing = true
 	cheering.playing = true
+	quiet_yay.playing = true
 	animator.play("opening")
 	doorOpen = true
 	print("opening")

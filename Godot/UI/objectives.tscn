@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dul155yma4moq"]
+[gd_scene load_steps=7 format=3 uid="uid://dul155yma4moq"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_j428b"]
 
@@ -11,18 +11,6 @@ font_size = 22
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sgesq"]
-font_size = 22
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_v3cqr"]
-font_size = 22
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_f3orv"]
-font_size = 22
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_yv4dw"]
 font_size = 22
 font_color = Color(0, 0, 0, 1)
 
@@ -42,17 +30,16 @@ grow_vertical = 2
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.584314)
 self_modulate = Color(1, 1, 1, 0.392157)
 custom_minimum_size = Vector2(250, 400)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -269.0
-offset_top = 16.0
-offset_right = -19.0
-offset_bottom = 416.0
+offset_left = -60.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
 grow_horizontal = 0
 texture = SubResource("CanvasTexture_j428b")
 
@@ -80,24 +67,6 @@ horizontal_alignment = 1
 layout_mode = 2
 text = "Milk"
 label_settings = SubResource("LabelSettings_sgesq")
-horizontal_alignment = 1
-
-[node name="pancakeMix" type="Label" parent="TextureRect2/VBoxContainer"]
-layout_mode = 2
-text = "Pancake Mix"
-label_settings = SubResource("LabelSettings_v3cqr")
-horizontal_alignment = 1
-
-[node name="Butter" type="Label" parent="TextureRect2/VBoxContainer"]
-layout_mode = 2
-text = "Butter"
-label_settings = SubResource("LabelSettings_f3orv")
-horizontal_alignment = 1
-
-[node name="Syrup" type="Label" parent="TextureRect2/VBoxContainer"]
-layout_mode = 2
-text = "Syrup"
-label_settings = SubResource("LabelSettings_yv4dw")
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
