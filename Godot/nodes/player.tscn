@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_qgusn"]
 [ext_resource type="PackedScene" uid="uid://c7785klo2c82o" path="res://UI/pause_menu.tscn" id="2_qavnk"]
 [ext_resource type="Script" path="res://scripts/PickupArea.gd" id="2_vy787"]
-[ext_resource type="Script" path="res://nodes/inventory_objectives.gd" id="4_u1i4h"]
+[ext_resource type="Script" path="res://scripts/inventory_objectives.gd" id="4_u1i4h"]
 [ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="5_bkas7"]
 [ext_resource type="PackedScene" uid="uid://dul155yma4moq" path="res://UI/objectives.tscn" id="6_ni4n0"]
 
