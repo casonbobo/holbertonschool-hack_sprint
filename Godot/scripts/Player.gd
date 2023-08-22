@@ -23,6 +23,7 @@ var hasEgg = false
 @onready var jump = $"../Node/jump"
 @onready var walking = $"../Node/walking"
 
+
 func _ready():
 	Input.mouse_mode = 2
 
