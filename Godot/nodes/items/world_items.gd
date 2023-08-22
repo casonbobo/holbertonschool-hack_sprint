@@ -1,18 +1,29 @@
 extends StaticBody3D
 
-var item_name
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	item_name = "bacon"
+@export var itemName: String
+@onready var player = $"../Player"
 
 
 func pick_up_item(body):
-	# Slot.initialize_item(item_name)
+	print(itemName)
+	addItem()
+	print(player.itemCount)
 	queue_free()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+	
+	
+func addItem():
+	if itemName == "Bacon":
+		player.get_bacon()
+	elif itemName == "Butter":
+		player.get_butter()
+	elif itemName == "Egg":
+		player.get_egg()
+	elif itemName == "Milk":
+		player.get_milk()
+	elif itemName == "Syrup":
+		player.get_syrup()
+	elif itemName == "pancakeMix":
+		player.get_pancakeMix()
+	else:
+		pass

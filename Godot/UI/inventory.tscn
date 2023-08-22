@@ -1,6 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmtdwgu82385u"]
+[gd_scene load_steps=11 format=3 uid="uid://cmtdwgu82385u"]
 
 [ext_resource type="Script" path="res://UI/slot.gd" id="1_6yadd"]
+[ext_resource type="Texture2D" uid="uid://d2rmab2fr2bff" path="res://item sprites/generic_pancake_mix.png" id="2_8lmm4"]
+[ext_resource type="Texture2D" uid="uid://cmvchhd5wdimt" path="res://item sprites/maple_syrup.png" id="3_imx0i"]
+[ext_resource type="Texture2D" uid="uid://cxeuvwkoks37" path="res://item sprites/milk_carton.png" id="4_sq6oc"]
+[ext_resource type="Texture2D" uid="uid://bfmhue2unsnt5" path="res://item sprites/raw_bacon.png" id="5_qpm2t"]
+[ext_resource type="Texture2D" uid="uid://b10irylkqudw1" path="res://item sprites/sliced_butter.png" id="6_iescr"]
+[ext_resource type="Texture2D" uid="uid://ddnd2g138h117" path="res://item sprites/test_egg.png" id="7_c26p5"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7mob6"]
 
@@ -43,11 +49,23 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
 
+[node name="pancakeMix" type="Sprite2D" parent="HBoxContainer/slot1"]
+visible = false
+position = Vector2(24, 26)
+scale = Vector2(0.0151, 0.0143571)
+texture = ExtResource("2_8lmm4")
+
 [node name="slot2" type="Panel" parent="HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
+
+[node name="MapleSyrup" type="Sprite2D" parent="HBoxContainer/slot2"]
+visible = false
+position = Vector2(25, 25)
+scale = Vector2(0.162891, 0.140625)
+texture = ExtResource("3_imx0i")
 
 [node name="slot3" type="Panel" parent="HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
@@ -55,11 +73,24 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
 
+[node name="MilkCarton" type="Sprite2D" parent="HBoxContainer/slot3"]
+visible = false
+position = Vector2(26, 26)
+scale = Vector2(0.0522222, 0.0550342)
+texture = ExtResource("4_sq6oc")
+
 [node name="slot4" type="Panel" parent="HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
+
+[node name="RawBacon" type="Sprite2D" parent="HBoxContainer/slot4"]
+visible = false
+position = Vector2(22, 28)
+rotation = 0.785398
+scale = Vector2(0.0373841, 0.0373841)
+texture = ExtResource("5_qpm2t")
 
 [node name="slot5" type="Panel" parent="HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
@@ -67,8 +98,20 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
 
+[node name="SlicedButter" type="Sprite2D" parent="HBoxContainer/slot5"]
+visible = false
+position = Vector2(26, 28)
+scale = Vector2(0.0326923, 0.0326923)
+texture = ExtResource("6_iescr")
+
 [node name="slot6" type="Panel" parent="HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s0lkp")
 script = ExtResource("1_6yadd")
+
+[node name="TestEgg" type="Sprite2D" parent="HBoxContainer/slot6"]
+visible = false
+position = Vector2(25, 25)
+scale = Vector2(0.00720348, 0.00720348)
+texture = ExtResource("7_c26p5")

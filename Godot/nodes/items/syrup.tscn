@@ -1,27 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1yfg5ve1tpx7"]
 
+[ext_resource type="Script" path="res://nodes/items/world_items.gd" id="1_7ekvs"]
 [ext_resource type="Texture2D" uid="uid://cmvchhd5wdimt" path="res://item sprites/maple_syrup.png" id="1_8fkam"]
-
-[sub_resource type="GDScript" id="GDScript_gxhwr"]
-script/source = "extends StaticBody3D
-
-var item_name
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	item_name = \"bacon\"
-
-
-func pick_up_item(body):
-# Slot.initialize_item(item_name)
-	queue_free()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k2xiv"]
 radius = 0.4
@@ -65,9 +45,10 @@ _data = {
 "floating": SubResource("Animation_qbmsv")
 }
 
-[node name="syrup" type="StaticBody3D"]
+[node name="Syrup" type="StaticBody3D"]
 collision_layer = 2
-script = SubResource("GDScript_gxhwr")
+script = ExtResource("1_7ekvs")
+itemName = "Syrup"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_k2xiv")
