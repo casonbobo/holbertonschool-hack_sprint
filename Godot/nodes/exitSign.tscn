@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dujnhxwaotni4"]
+
+[ext_resource type="Texture2D" uid="uid://crg7qwgc46cmg" path="res://item sprites/exitSign.png" id="1_a4or5"]
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_a4or5")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -7.41036)
+light_color = Color(1, 0, 0, 1)
+light_energy = 10.0
+light_indirect_energy = 4.0
+light_size = 5.0
+light_specular = 0.0
+light_bake_mode = 1
+spot_range = 10.0
+spot_angle = 40.0
