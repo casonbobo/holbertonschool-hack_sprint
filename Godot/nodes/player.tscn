@@ -63,12 +63,14 @@ visible = false
 
 [node name="writing" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("7_6v3v5")
-volume_db = 3.0
+volume_db = -11.0
 
 [node name="x" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("8_miabb")
+volume_db = -18.0
 
 [node name="open" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("9_l8qp5")
+volume_db = -16.0
 
 [connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]

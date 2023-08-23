@@ -416,36 +416,44 @@ transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 
 
 [node name="Ambiance" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("15_0n007")
+volume_db = -18.0
 autoplay = true
 script = ExtResource("16_du7hh")
 
 [node name="pickupItem" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("16_jif2h")
+volume_db = -20.0
 
 [node name="doorOpen" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("17_cxl74")
+volume_db = -15.0
 pitch_scale = 2.5
 
 [node name="doorClose" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("18_jme7b")
+volume_db = -15.0
 
 [node name="jump" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("19_gh3pv")
+volume_db = -18.0
 pitch_scale = 2.0
 
 [node name="walking" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("21_tbvg6")
-volume_db = 2.0
+volume_db = -14.0
 
 [node name="Unsettling" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("22_p1ucj")
+volume_db = -18.0
 script = ExtResource("22_l2je7")
 
 [node name="Winning" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("24_awrt7")
+volume_db = -18.0
 
 [node name="Cheering" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("25_btohb")
+volume_db = -15.0
 
 [node name="quietYay" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("26_jtiuu")
