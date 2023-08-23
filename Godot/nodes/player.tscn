@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwb41rep8d3x4"]
+[gd_scene load_steps=13 format=3 uid="uid://cwb41rep8d3x4"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_qgusn"]
 [ext_resource type="PackedScene" uid="uid://c7785klo2c82o" path="res://UI/pause_menu.tscn" id="2_qavnk"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" path="res://scripts/inventory_objectives.gd" id="4_u1i4h"]
 [ext_resource type="PackedScene" uid="uid://cmtdwgu82385u" path="res://UI/inventory.tscn" id="5_bkas7"]
 [ext_resource type="PackedScene" uid="uid://dul155yma4moq" path="res://UI/objectives.tscn" id="6_ni4n0"]
+[ext_resource type="AudioStream" uid="uid://vc3648qb5hka" path="res://sounds and music/objective_update.mp3" id="7_6v3v5"]
+[ext_resource type="AudioStream" uid="uid://cw617kymdmvbg" path="res://sounds and music/cross_off_objective.mp3" id="8_miabb"]
+[ext_resource type="AudioStream" uid="uid://chr33mru1k8r0" path="res://sounds and music/open_objectives.mp3" id="9_l8qp5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c65ih"]
 
@@ -55,5 +58,17 @@ visible = false
 [node name="objectives" parent="inventory and objectives" instance=ExtResource("6_ni4n0")]
 
 [node name="PauseMenu" parent="inventory and objectives" instance=ExtResource("2_qavnk")]
+
+[node name="sounds" type="Node" parent="."]
+
+[node name="writing" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("7_6v3v5")
+volume_db = 1.0
+
+[node name="x" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("8_miabb")
+
+[node name="open" type="AudioStreamPlayer" parent="sounds"]
+stream = ExtResource("9_l8qp5")
 
 [connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]

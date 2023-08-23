@@ -433,7 +433,7 @@ pitch_scale = 2.0
 
 [node name="walking" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("21_tbvg6")
-volume_db = 1.0
+volume_db = 2.0
 
 [node name="Unsettling" type="AudioStreamPlayer" parent="Node"]
 stream = ExtResource("22_p1ucj")

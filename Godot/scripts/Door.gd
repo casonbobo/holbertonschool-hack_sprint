@@ -8,7 +8,8 @@ var doorOpen = false;
 @onready var unsettling = $"../Node/Unsettling"
 @onready var winning = $"../Node/Winning"
 @onready var cheering = $"../Node/Cheering"
-@onready var quiet_yay = $"../Node/quietYay"
+# @onready var quiet_yay = $"../Node/quietYay"
+@onready var objectives = $"../Player/inventory and objectives/objectives"
 
 
 func closing():
@@ -17,6 +18,7 @@ func closing():
 	winning.playing = false
 	cheering.playing = false
 #	quiet_yay.playing = false
+	objectives.brekfast()
 	animator.play("closing")
 	doorOpen = false
 	print("closing")
@@ -26,7 +28,8 @@ func opening():
 	unsettling.playing = false
 	winning.playing = true
 	cheering.playing = true
-	quiet_yay.playing = true
+#	quiet_yay.playing = true
+	objectives.brekfast()
 	animator.play("opening")
 	doorOpen = true
 	print("opening")
