@@ -1,0 +1,202 @@
+[gd_scene load_steps=11 format=3 uid="uid://dchavnjr6t03x"]
+
+[ext_resource type="Texture2D" uid="uid://vkvuswas8doj" path="res://item sprites/MenuImage.png" id="2_77a37"]
+[ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="2_qomwl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p43xp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vkkqa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_glft7"]
+font = ExtResource("2_qomwl")
+font_size = 90
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ocl3d"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_71bs3"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6f4vi"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qiw4a"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ln0be"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Node2D"]
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+modulate = Color(0.752941, 0.541176, 0.25098, 1)
+layout_mode = 2
+offset_right = 900.0
+offset_bottom = 400.0
+texture = SubResource("CanvasTexture_p43xp")
+
+[node name="TextureRect4" type="TextureRect" parent="Background"]
+modulate = Color(0.390625, 0.332031, 0.25, 1)
+layout_mode = 2
+offset_left = 880.0
+offset_right = 1180.0
+offset_bottom = 105.0
+texture = SubResource("CanvasTexture_vkkqa")
+
+[node name="Image" type="TextureRect" parent="Background"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_left = 425.0
+offset_top = 104.0
+offset_right = 4457.0
+offset_bottom = 3128.0
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_77a37")
+flip_h = true
+
+[node name="TextureRect5" type="TextureRect" parent="Background"]
+modulate = Color(0.390625, 0.332031, 0.25, 1)
+layout_mode = 2
+offset_left = 883.0
+offset_top = 84.0
+offset_right = 1183.0
+offset_bottom = 189.0
+rotation = -0.508652
+scale = Vector2(0.317194, 0.698806)
+texture = SubResource("CanvasTexture_vkkqa")
+
+[node name="TextureRect6" type="TextureRect" parent="Background"]
+modulate = Color(0.390625, 0.332031, 0.25, 1)
+layout_mode = 2
+offset_left = 879.0
+offset_top = 155.0
+offset_right = 1179.0
+offset_bottom = 260.0
+rotation = -0.371964
+scale = Vector2(0.146339, 0.227771)
+texture = SubResource("CanvasTexture_vkkqa")
+
+[node name="TextureRect7" type="TextureRect" parent="Background"]
+modulate = Color(0.390625, 0.332031, 0.25, 1)
+layout_mode = 2
+offset_left = 1130.0
+offset_top = 85.0
+offset_right = 1430.0
+offset_bottom = 190.0
+rotation = 0.510306
+scale = Vector2(0.136878, 0.311652)
+texture = SubResource("CanvasTexture_vkkqa")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+modulate = Color(0.390625, 0.332031, 0.25, 1)
+layout_mode = 2
+offset_left = 779.0
+offset_right = 879.0
+offset_bottom = 180.0
+rotation = -0.45204
+texture = SubResource("CanvasTexture_vkkqa")
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+modulate = Color(0.752941, 0.541176, 0.25098, 1)
+layout_mode = 2
+offset_right = 480.0
+offset_bottom = 650.0
+texture = SubResource("CanvasTexture_p43xp")
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+offset_left = 16.0
+offset_top = 79.0
+offset_right = 847.0
+offset_bottom = 219.0
+text = "Breakfast Hunter"
+label_settings = SubResource("LabelSettings_glft7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+top_level = true
+offset_left = 330.0
+offset_top = 224.0
+offset_right = 548.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("2_qomwl")
+theme_override_font_sizes/font_size = 70
+text = "START"
+icon_alignment = 1
+
+[node name="Controls" type="VBoxContainer" parent="."]
+offset_left = -42.0
+offset_top = 372.0
+offset_right = 931.0
+offset_bottom = 584.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="WASD" type="Label" parent="Controls/HBoxContainer"]
+layout_mode = 2
+text = "[W]
+[A] [S] [D]
+to move"
+label_settings = SubResource("LabelSettings_ocl3d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SPACEBAR" type="Label" parent="Controls/HBoxContainer"]
+layout_mode = 2
+text = "[SPACEBAR]
+to jump"
+label_settings = SubResource("LabelSettings_71bs3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E" type="Label" parent="Controls/HBoxContainer"]
+layout_mode = 2
+text = "[E]
+to open door"
+label_settings = SubResource("LabelSettings_6f4vi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Controls"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="TAB" type="Label" parent="Controls/HBoxContainer2"]
+layout_mode = 2
+text = "[TAB]
+to open
+objectives"
+label_settings = SubResource("LabelSettings_qiw4a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ESC" type="Label" parent="Controls/HBoxContainer2"]
+layout_mode = 2
+text = "[ESC]
+to open
+pause menu"
+label_settings = SubResource("LabelSettings_ln0be")
+horizontal_alignment = 1
+vertical_alignment = 1
