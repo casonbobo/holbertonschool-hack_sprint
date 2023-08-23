@@ -63,7 +63,7 @@ visible = false
 
 [node name="writing" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("7_6v3v5")
-volume_db = 1.0
+volume_db = 3.0
 
 [node name="x" type="AudioStreamPlayer" parent="sounds"]
 stream = ExtResource("8_miabb")

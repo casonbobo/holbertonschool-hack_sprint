@@ -10,6 +10,7 @@ var doorOpen = false;
 @onready var cheering = $"../Node/Cheering"
 # @onready var quiet_yay = $"../Node/quietYay"
 @onready var objectives = $"../Player/inventory and objectives/objectives"
+@onready var torch = $"../Torch"
 
 
 func closing():
@@ -18,6 +19,7 @@ func closing():
 	winning.playing = false
 	cheering.playing = false
 #	quiet_yay.playing = false
+	torch.change_lighting(Color(0.5, 0, 0), 0.3)
 	objectives.brekfast()
 	animator.play("closing")
 	doorOpen = false
@@ -29,6 +31,7 @@ func opening():
 	winning.playing = true
 	cheering.playing = true
 #	quiet_yay.playing = true
+	torch.change_lighting()
 	objectives.brekfast()
 	animator.play("opening")
 	doorOpen = true
