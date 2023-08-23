@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dchavnjr6t03x"]
+[gd_scene load_steps=15 format=3 uid="uid://dchavnjr6t03x"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_w5msl"]
 [ext_resource type="Texture2D" uid="uid://vkvuswas8doj" path="res://item sprites/MenuImage.png" id="2_77a37"]
 [ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="2_qomwl"]
+[ext_resource type="AudioStream" uid="uid://6ovp1xu2b5u3" path="res://sounds and music/eeryA.mp3" id="4_hw7ep"]
+[ext_resource type="Script" path="res://scripts/MainMenuMusic.gd" id="5_2q4jf"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_p43xp"]
 
@@ -224,5 +226,10 @@ to pick them up"
 label_settings = SubResource("LabelSettings_pa1an")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hw7ep")
+volume_db = -18.0
+script = ExtResource("5_2q4jf")
 
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_button_pressed"]
