@@ -220,6 +220,12 @@ theme_override_fonts/font = ExtResource("3_s3ok0")
 theme_override_font_sizes/font_size = 40
 text = "RESUME"
 
+[node name="Menu" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_s3ok0")
+theme_override_font_sizes/font_size = 40
+text = "MENU"
+
 [node name="Quit" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_s3ok0")
