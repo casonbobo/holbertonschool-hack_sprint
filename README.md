@@ -23,6 +23,12 @@ In Brekfast Hunters, your goal is to collect all the breakfast ingredients place
 
 To play the game, follow these steps:
 
+**ITCH.IO PAGE:**
+    ```
+    https://breakfasthub.itch.io/brekfast-hunters
+    ```
+    *itchy*
+
 1. **Clone the Repository:** Open your terminal and run the following command to clone the game repository:
 
     ```bash
