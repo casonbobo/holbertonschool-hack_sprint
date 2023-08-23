@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready() -> void:
 	quit_button.pressed.connect(get_tree().quit)
-
+	get_tree().paused = false
+	
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Level1.tscn")
