@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dchavnjr6t03x"]
+[gd_scene load_steps=12 format=3 uid="uid://dchavnjr6t03x"]
 
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_w5msl"]
 [ext_resource type="Texture2D" uid="uid://vkvuswas8doj" path="res://item sprites/MenuImage.png" id="2_77a37"]
 [ext_resource type="FontFile" uid="uid://dtphcsow7t1e1" path="res://Font/alagard.ttf" id="2_qomwl"]
 
@@ -38,6 +39,7 @@ font_size = 30
 font_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_w5msl")
 
 [node name="Background" type="Control" parent="."]
 layout_mode = 3
@@ -200,3 +202,5 @@ pause menu"
 label_settings = SubResource("LabelSettings_ln0be")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
