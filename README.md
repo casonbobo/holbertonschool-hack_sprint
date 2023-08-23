@@ -1,8 +1,6 @@
 
 # Brekfast Hunters - Godot Game - holbertonschool-hack_sprint
 
-![Gameplay Screenshot](gameplay_screenshot.png)
-
 Welcome to **Brekfast Hunters**, a fun and challenging Godot game where you embark on a quest to collect breakfast ingredients scattered throughout a maze. Get ready to navigate through twists and turns, overcome obstacles, and enjoy a delightful gaming experience!
 
 ## Table of Contents
@@ -15,7 +13,7 @@ Welcome to **Brekfast Hunters**, a fun and challenging Godot game where you emba
   - [Gameplay](#gameplay)
   - [Features](#features)
   - [Contributing](#contributing)
-  - [License](#license)
+  - [Authors](#authors)
 
 ## Game Overview
 
@@ -51,14 +49,14 @@ To play the game, follow these steps:
 
 3. **Challenges:** The maze is filled with obstacles, traps (again, no traps), and dead ends. Avoid these obstacles while searching for ingredients to maximize your chances of success.
 
-4. **Winning:** You win the game when you successfully collect all the breakfast ingredients and navigate back to the starting point.
+4. **Winning:** You win the game when you successfully collect all the breakfast ingredients and navigate back to the door.
 
 ## Features
 
-- Engaging maze-based gameplay.
-- Variety of breakfast ingredients to collect.
+- Engaging maze-based gameplay (first maze-like game).
+- Variety of breakfast ingredients to collect (WOW).
 - Challenging obstacles and traps(read above note).
-- Simple and intuitive controls.
+- Simple and intuitive controls, with out all the buttons to confuse your fingers.
 - Addictive and fun experience for players of all ages.
 
 ## Contributing
@@ -71,13 +69,10 @@ Contributions to the game are welcome! If you have ideas for improvements, bug f
 4. Push to the branch: `git push origin feature-name`.
 5. Open a pull request detailing your changes.
 
-## License
+If you encounter any issues or have questions, feel free to create an issue on the GitHub repository. Have fun collecting breakfast ingredients and conquering the maze!
 
-This game is distributed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
+## Authors
 
----
-
-Enjoy your journey through the Breakfast Maze Madness! If you encounter any issues or have questions, feel free to create an issue on the GitHub repository. Have fun collecting breakfast ingredients and conquering the maze!
 Made by:
 Karis Richardson
 and Cason Bobo
