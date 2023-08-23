@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dchavnjr6t03x"]
+[gd_scene load_steps=13 format=3 uid="uid://dchavnjr6t03x"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_w5msl"]
 [ext_resource type="Texture2D" uid="uid://vkvuswas8doj" path="res://item sprites/MenuImage.png" id="2_77a37"]
@@ -34,6 +34,11 @@ font_size = 30
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ln0be"]
+font = ExtResource("2_qomwl")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pa1an"]
 font = ExtResource("2_qomwl")
 font_size = 30
 font_color = Color(0, 0, 0, 1)
@@ -152,10 +157,10 @@ theme_override_font_sizes/font_size = 70
 text = "QUIT"
 
 [node name="Controls" type="VBoxContainer" parent="."]
-offset_left = -42.0
-offset_top = 372.0
-offset_right = 931.0
-offset_bottom = 584.0
+offset_left = -51.0
+offset_top = 381.0
+offset_right = 922.0
+offset_bottom = 593.0
 theme_override_constants/separation = 20
 alignment = 1
 
@@ -209,6 +214,14 @@ text = "[ESC]
 to open
 pause menu"
 label_settings = SubResource("LabelSettings_ln0be")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="simplyWalk" type="Label" parent="Controls/HBoxContainer2"]
+layout_mode = 2
+text = "walk into items
+to pick them up"
+label_settings = SubResource("LabelSettings_pa1an")
 horizontal_alignment = 1
 vertical_alignment = 1
 
